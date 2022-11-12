@@ -1,10 +1,12 @@
 import java.util.concurrent.Callable;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * Classe para cálculo de termo do número de euler a interface
  * <code>Callable</code> foi implementada pela presente classe
  */
-public class TermCalculator implements Callable<Double> {
+public class TermCalculator implements Callable<BigDecimal> {
 	/** Parâmetro que corresponde ao número que é usado no cálculo do termo*/
 	private int number;
 
@@ -21,7 +23,7 @@ public class TermCalculator implements Callable<Double> {
 	 * @return termo do número de euler
 	 */
 	@Override
-	public Double call() {
+	public BigDecimal call() {
 		return term(this.number);
 	}
 
@@ -42,7 +44,7 @@ public class TermCalculator implements Callable<Double> {
 	 * @param number número cujo o fatorial deve ser divisor do número 1
 	 * @return termo do número de euler
 	 */
-    private Double term(int number) {
-        return 1/(double)(factorial(number));
+    private BigDecimal term(int number) {
+        return new BigDecimal(1).divide(new BigDecimal(factorial(number)), 50, RoundingMode.HALF_UP);
     }
 }

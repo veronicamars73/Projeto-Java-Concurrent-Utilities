@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -33,18 +34,18 @@ public class FixedThreadRunner {
 		ExecutorService executor =
 			Executors.newFixedThreadPool(num_threads);
 		
-		List<Future<Double>> results = new ArrayList<>();
-        double euler_numero = 0;
+		List<Future<BigDecimal>> results = new ArrayList<>();
+        BigDecimal euler_numero = new BigDecimal(0.0);
 
 		for (int x = 0; x < num_termos; x++) {
-			Callable<Double> calculator = new TermCalculator(x);
-			Future<Double> factorial = executor.submit(calculator);
+			Callable<BigDecimal> calculator = new TermCalculator(x);
+			Future<BigDecimal> factorial = executor.submit(calculator);
 			results.add(factorial);
 		}
 		
 		try {
-			for (Future<Double> result : results) {
-				euler_numero = euler_numero + result.get();
+			for (Future<BigDecimal> result : results) {
+				euler_numero = euler_numero.add(result.get());
 			}
 		} catch (ExecutionException | InterruptedException e) {
 			e.printStackTrace();
