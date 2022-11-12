@@ -7,7 +7,6 @@ import java.math.RoundingMode;
  * <code>Callable</code> foi implementada pela presente classe
  */
 public class TermCalculator implements Callable<BigDecimal> {
-	/** Parâmetro que corresponde ao número que é usado no cálculo do termo*/
 	private int number;
 
 	/**

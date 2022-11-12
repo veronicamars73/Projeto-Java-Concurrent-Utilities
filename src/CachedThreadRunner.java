@@ -15,7 +15,6 @@ import java.lang.Thread;
  * o CachedThreadPool.
  *
  */
-
 public class CachedThreadRunner {
     /**
 	 * Método main
