@@ -1,0 +1,68 @@
+{
+  // Use o IntelliSense para saber mais sobre os atributos possíveis.
+  // Focalizar para exibir as descrições dos atributos existentes.
+  // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch FixedThreadRunner",
+      "request": "launch",
+      "mainClass": "FixedThreadRunner",
+      "projectName": "projeto-java-concurrent-utilities_2cc42002",
+      "args": "3 30"
+    },
+    {
+      "type": "java",
+      "name": "Launch StealingWorkThreadPool",
+      "request": "launch",
+      "mainClass": "StealingWorkThreadPool",
+      "projectName": "projeto-java-concurrent-utilities_2cc42002",
+      "args": "30"
+    },
+    {
+      "type": "java",
+      "name": "Launch CachedThreadRunner",
+      "request": "launch",
+      "mainClass": "CachedThreadRunner",
+      "projectName": "projeto-java-concurrent-utilities_2cc42002",
+      "args": "30"
+    },
+    {
+      "type": "java",
+      "name": "Launch CachedThreadRunner",
+      "request": "launch",
+      "mainClass": "CachedThreadRunner",
+      "projectName": "segunda_unid_primeiro_trab_dea022d4",
+      "args": "30"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch FixedThreadRunner",
+      "request": "launch",
+      "mainClass": "FixedThreadRunner",
+      "projectName": "segunda_unid_primeiro_trab_dea022d4",
+      "args": "5 30"
+    },
+    {
+      "type": "java",
+      "name": "Launch MultiThreadCalculator",
+      "request": "launch",
+      "mainClass": "MultiThreadCalculator",
+      "projectName": "segunda_unid_primeiro_trab_dea022d4"
+    },
+    {
+      "type": "java",
+      "name": "Launch SingleThreadCalculator",
+      "request": "launch",
+      "mainClass": "SingleThreadCalculator",
+      "projectName": "segunda_unid_primeiro_trab_dea022d4"
+    }
+  ]
+}
